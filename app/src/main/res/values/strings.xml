@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HW3 Lists</string>
+    <string name="button_add_element">Добавить элемент</string>
 </resources>
