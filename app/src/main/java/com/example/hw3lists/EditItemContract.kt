@@ -12,7 +12,7 @@ class EditItemContract : ActivityResultContract<Unit, Fox?>() {
 
     override fun parseResult(resultCode: Int, intent: Intent?): Fox? = when {
         resultCode != Activity.RESULT_OK -> null
-        else -> intent?.getSerializableExtra("key") as Fox
+        else -> intent?.getSerializableExtra("Fox") as Fox
     }
 
 }
