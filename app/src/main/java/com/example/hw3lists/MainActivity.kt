@@ -11,11 +11,10 @@ import com.example.hw3lists.EditItemContract
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var adapter: FoxAdapter
-    private lateinit var foxDataSource: FoxDataSource
+    private val foxAdapter =  FoxAdapter()
 
-    private val addFoxActivityLauncher = registerForActivityResult(EditItemContract()) { result ->
-        adapter.
+    private val contract = registerForActivityResult(EditItemContract()) {
+        foxAdapter.addFox(it)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,16 +23,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonAdd.setOnClickListener {
-            addFoxActivityLauncher.launch(Unit)
+            moveOnAddElementActivity()
         }
 
-        foxDataSource = FoxDataSource()
-        adapter = FoxAdapter()
-
-        val layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.layoutManager = layoutManager
-        binding.recyclerView.adapter = adapter
+        binding.recyclerView.adapter = foxAdapter
     }
 
-    private val userListener: FoxListener =
+    private fun moveOnAddElementActivity() {
+        contract.launch(Unit)
+    }
 }

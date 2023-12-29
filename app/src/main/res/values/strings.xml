@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">HW3 Lists</string>
     <string name="button_add_element">Добавить элемент</string>
+    <string name="hint_color">Цвет</string>
+    <string name="hint_age">Возраст</string>
+    <string name="hint_save">Сохранить</string>
+    <string name="hint_name">Имя</string>
 </resources>

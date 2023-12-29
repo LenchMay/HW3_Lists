@@ -14,13 +14,18 @@ class FoxAddActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonSave.setOnClickListener {
-
-            val fox = Fox(name = binding.ageEditText.text.toString(), age = binding.ageEditText.text.toString(), color = binding.colorEditColor.text.toString())
-            val data = Intent().apply {
-                putExtra("Fox", fox)
-            }
-            setResult(RESULT_OK, data)
+            val intent = Intent()
+            intent.putExtra(EXTRA_NAME, binding.nameEditText.text.toString())
+            intent.putExtra(EXTRA_AGE, binding.ageEditText.text.toString())
+            intent.putExtra(EXTRA_COLOR, binding.colorEditText.text.toString())
+            setResult(RESULT_OK, intent)
             finish()
         }
+    }
+
+    companion object {
+        const val EXTRA_NAME = "name"
+        const val EXTRA_AGE = "age"
+        const val EXTRA_COLOR = "color"
     }
 }

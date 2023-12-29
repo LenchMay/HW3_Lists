@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:hint="Имя"
+        android:hint="@string/hint_name"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number"
-        android:hint="Возраст"
+        android:inputType="text"
+        android:hint="@string/hint_age"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintTop_toBottomOf="@id/name_edit_text"
@@ -36,12 +36,12 @@
         />
 
     <EditText
-        android:id="@+id/color_edit_color"
+        android:id="@+id/color_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:hint="Цвет"
+        android:hint="@string/hint_color"
         android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@id/age_edit_text"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,10 +53,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Сохранить"
+        android:text="@string/hint_save"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/color_edit_color"
+        app:layout_constraintTop_toBottomOf="@id/color_edit_text"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
