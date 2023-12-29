@@ -5,9 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hw3lists.databinding.FoxItemBinding
 
-class FoxAdapter(): RecyclerView.Adapter<FoxAdapter.FoxesViewHolder>() {
+class FoxAdapter: RecyclerView.Adapter<FoxAdapter.FoxesViewHolder>() {
 
-    private var foxes = mutableListOf<Fox>()
+    private val foxes = mutableListOf<Fox>()
 
     fun addFox(fox: Fox){
         foxes.add(fox)
